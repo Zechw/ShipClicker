@@ -1,0 +1,63 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - Laser
+  - Enemy
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - 
+  - 
+  - Lasers
+  - Explosions
+  - Enemies
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Background
+    uniqueID: 3958415723
+    locked: 0
+  - name: Enemies
+    uniqueID: 2275232227
+    locked: 0
+  - name: Weapons
+    uniqueID: 955422857
+    locked: 0
+  - name: Player
+    uniqueID: 3415253155
+    locked: 0
+  - name: Effects
+    uniqueID: 3068637763
+    locked: 0
+  - name: Cursor
+    uniqueID: 1851308839
+    locked: 0
+  - name: Default
+    uniqueID: 0
+    locked: 0
