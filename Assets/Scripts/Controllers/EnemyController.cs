@@ -19,7 +19,7 @@ public class EnemyController : MonoBehaviour {
     // Use this for initialization
 	void Start ()
     {
-        InvokeRepeating("FireWeapon", 2f, Random.Range(1.1f, 2.2f));
+        InvokeRepeating("FireWeapon", 4f, Random.Range(1.1f, 2.2f));
         InvokeRepeating("ChangeSlide", 0, 3);
 	}
 
@@ -67,6 +67,9 @@ public class EnemyController : MonoBehaviour {
 
     private void FireWeapon()
     {
+        if (Mathf.Abs(this.transform.position.x) > 25 || Mathf.Abs(this.transform.position.y) > 13) { return; }
+        Debug.Log("shootin");
+
         AudioSource s = Instantiate(activeLevel.laserSound);
         Destroy(s.gameObject, 1);
 

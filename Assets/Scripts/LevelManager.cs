@@ -72,12 +72,6 @@ public class LevelManager : MonoBehaviour
 
     public void startGame()
     {
-        GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
-        for (int i = 0; i < enemies.Length; i++)
-        {
-            Destroy(enemies[i]);
-        }
-
         activeUI.transform.Find("Tutorial").GetComponent<Text>().text = "Click on your ship to build power. Use that power to fire your weapons. \n Move with WASD";
 
         score = 0;
@@ -106,6 +100,12 @@ public class LevelManager : MonoBehaviour
     IEnumerator DelayedCleanup()
     {
         yield return new WaitForSeconds(1);
+
+        GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
+        for (int i = 0; i < enemies.Length; i++)
+        {
+            Destroy(enemies[i]);
+        }
 
         activeUI.transform.Find("Play Again").gameObject.SetActive(true);
     }

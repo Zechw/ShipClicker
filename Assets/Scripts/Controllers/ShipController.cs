@@ -16,10 +16,10 @@ public class ShipController : MonoBehaviour {
     public bool unlimitedPower = false;
     public bool noDeath = false;
 
-    private float minX = -22;
-    private float maxX = -10;
-    private float minY = -11;
-    private float maxY = 11;
+    private float minX = -25;
+    private float maxX = 25;
+    private float minY = -13;
+    private float maxY = 13;
     private float moveSpeed = 10;
 
     public Transform target;
@@ -111,8 +111,8 @@ public class ShipController : MonoBehaviour {
         }
         else
         {
-            ParticleSystem shield1 = Instantiate(shield, transform.position, collision.transform.rotation);
-            ParticleSystem shield2 = Instantiate(shield, transform.position, collision.transform.rotation);
+            ParticleSystem shield1 = Instantiate(shield, transform.position, collision.transform.rotation, transform);
+            ParticleSystem shield2 = Instantiate(shield, transform.position, collision.transform.rotation, transform);
             shield1.transform.Rotate(0, 0, -90 -5);
             shield2.transform.Rotate(0, 180, -90 -5);
             Destroy(shield1.gameObject, 2);
